@@ -1,8 +1,8 @@
 --[[
 
-	Wall Hack Module [AirHub] by Exunys © CC0 1.0 Universal (2023)
+	
 
-	https://github.com/Exunys
+	https://github.com/TrixDaBest11
 
 ]]
 
@@ -13,7 +13,7 @@ local WorldToViewportPoint, Vector2new, Vector3new, Vector3zero, CFramenew, Draw
 
 --// Launching checks
 
-if not getgenv().AirHub or getgenv().AirHub.WallHack then return end
+if not getgenv().CrypticWare or getgenv().CrypticWare.WallHack then return end
 
 --// Services
 
@@ -29,7 +29,7 @@ local ServiceConnections = {}
 
 --// Environment
 
-getgenv().AirHub.WallHack = {
+getgenv().CrypticWare.WallHack = {
 	Settings = {
 		Enabled = false,
 		TeamCheck = false,
@@ -128,7 +128,7 @@ getgenv().AirHub.WallHack = {
 	WrappedPlayers = {}
 }
 
-local Environment = getgenv().AirHub.WallHack
+local Environment = getgenv().CrypticWare.WallHack
 
 --// Core Functions
 
@@ -866,8 +866,8 @@ function Environment.Functions:Exit()
 		end
 	end
 
-	getgenv().AirHub.WallHack.Functions = nil
-	getgenv().AirHub.WallHack = nil
+	getgenv().CrypticWare.WallHack.Functions = nil
+	getgenv().CrypticWare.WallHack = nil
 
 	Load = nil; GetPlayerTable = nil; AssignRigType = nil; InitChecks = nil; UpdateCham = nil; Visuals = nil; Wrap = nil; UnWrap = nil
 end
