@@ -12,21 +12,21 @@ local loadstring, getgenv, setclipboard, tablefind, UserInputService = loadstrin
 
 --// Loaded check
 
-if getgenv().AirHub then return end
+if getgenv().CrypticWare then return end
 
 --// Environment
 
-getgenv().AirHub = {}
+getgenv().CrypticWare = {}
 
 --// Load Modules
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/AirHub/main/Modules/Aimbot.lua"))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/AirHub/main/Modules/Wall%20Hack.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TrixDaBest11/CrypticWare/main/Modules/Aimbot.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TrixDaBest11/CrypticWare/main/Modules/Wall%20Hack.lua"))()
 
 --// Variables
 
 local Library = loadstring(game:GetObjects("rbxassetid://7657867786")[1].Source)() -- Pepsi's UI Library
-local Aimbot, WallHack = getgenv().AirHub.Aimbot, getgenv().AirHub.WallHack
+local Aimbot, WallHack = getgenv().CrypticWare.Aimbot, getgenv().CrypticWare.WallHack
 local Parts, Fonts, TracersType = {"Head", "HumanoidRootPart", "Torso", "Left Arm", "Right Arm", "Left Leg", "Right Leg", "LeftHand", "RightHand", "LeftLowerArm", "RightLowerArm", "LeftUpperArm", "RightUpperArm", "LeftFoot", "LeftLowerLeg", "UpperTorso", "LeftUpperLeg", "RightFoot", "RightLowerLeg", "LowerTorso", "RightUpperLeg"}, {"UI", "System", "Plex", "Monospace"}, {"Bottom", "Center", "Mouse"}
 
 --// Frame
@@ -34,14 +34,14 @@ local Parts, Fonts, TracersType = {"Head", "HumanoidRootPart", "Torso", "Left Ar
 Library.UnloadCallback = function()
 	Aimbot.Functions:Exit()
 	WallHack.Functions:Exit()
-	getgenv().AirHub = nil
+	getgenv().CrypticWare = nil
 end
 
 local MainFrame = Library:CreateWindow({
-	Name = "AirHub",
+	Name = "CrypticWare",
 	Themeable = {
 		Image = "7059346386",
-		Info = "Made by Exunys\nPowered by Pepsi's UI Library",
+		Info = "Made by Trix\nPowered by Pepsi's UI Library",
 		Credit = false
 	},
 	Background = "",
@@ -900,6 +900,6 @@ FunctionsSection:AddButton({
 FunctionsSection:AddButton({
 	Name = "Copy Script Page",
 	Callback = function()
-		setclipboard("https://github.com/Exunys/AirHub")
+		setclipboard("https://github.com/TrixDaBest11/CrypticWare")
 	end
 })
